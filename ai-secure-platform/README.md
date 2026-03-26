@@ -1,35 +1,26 @@
-# AI Secure Log Analyzer
+# AI Secure Platform
 
 ## Overview
-A backend system that analyzes logs to detect sensitive information like emails, passwords, and API keys, and assigns a risk score with actionable insights.
-
----
+A log analysis system that detects sensitive data like emails, passwords, and API keys.
 
 ## Features
-- Detects:
-  - Email addresses
-  - Passwords
-  - API keys
-- Risk scoring engine (Low / High / Critical)
+- Regex-based detection
+- Risk scoring engine
 - Insights generation
-- Action recommendation (ALLOW / BLOCK)
-- Timestamp support
-- Swagger API documentation
-- Simple frontend UI
+- Action decision (BLOCK / ALLOW)
+- Swagger API testing
+- Simple UI
 
----
+## API
+POST /api/analyze
 
-## Tech Stack
-- Java 21
-- Spring Boot
-- REST API
-- Regex Pattern Matching
-- Swagger (OpenAPI)
-- HTML + JavaScript
+### Request
+{
+  "content": "your log text"
+}
 
----
+### Response
+Returns risk level, findings, and insights.
 
-## How to Run
-
-```bash
+## Run
 mvn spring-boot:run
