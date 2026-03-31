@@ -22,7 +22,7 @@ public class AnalysisController {
     }
     @GetMapping("/")
     public String home() {
-        return "redirect:/ai-secure-platform.html";
+        return "redirect:/index.html";
     }
     @Operation(
             summary = "Analyze logs",
