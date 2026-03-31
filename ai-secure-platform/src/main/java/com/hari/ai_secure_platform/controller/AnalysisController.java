@@ -20,7 +20,10 @@ public class AnalysisController {
     public AnalysisController(AnalysisService analyzerService) {
         this.analyzerService = analyzerService;
     }
-
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/ai-secure-platform.html";
+    }
     @Operation(
             summary = "Analyze logs",
             description = "Scans input logs and detects sensitive data such as emails, passwords, and API keys."
